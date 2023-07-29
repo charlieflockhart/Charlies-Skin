@@ -206,12 +206,25 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">2</property>
-			<label>Wishlist Movies</label>
+			<label>Watchlist Movies</label>
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<onclick>ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/Movies",return)</onclick>
 			<property name="path">ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/Movies",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">2</property>
+			<label>Homelander Movies</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>image://C%3a%5cUsers%5cpavlos%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.homelander.artwork%5cresources%5cmedia%5chomelander%5cmovies.png/</thumb>
+			<property name="translatedPath">ActivateWindow(Videos,"plugin://plugin.video.homelander/?action=movieNavigator",return)</property>
+			<onclick>ActivateWindow(Videos,"plugin://plugin.video.homelander/?action=movieNavigator",return)</onclick>
+			<property name="path">ActivateWindow(Videos,"plugin://plugin.video.homelander/?action=movieNavigator",return)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
@@ -241,7 +254,7 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">3</property>
-			<label>New TV Series</label>
+			<label>New TV Shows</label>
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
 			<thumb />
@@ -253,12 +266,25 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">3</property>
-			<label>Wishlist TV Series</label>
+			<label>Watchlist TV Series</label>
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<onclick>ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/TVShows",return)</onclick>
 			<property name="path">ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/TVShows",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">3</property>
+			<label>Homelander TV Series</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>image://C%3a%5cUsers%5cpavlos%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.homelander.artwork%5cresources%5cmedia%5chomelander%5ctvshows.png/</thumb>
+			<property name="translatedPath">ActivateWindow(Videos,"plugin://plugin.video.homelander/?action=tvNavigator",return)</property>
+			<onclick>ActivateWindow(Videos,"plugin://plugin.video.homelander/?action=tvNavigator",return)</onclick>
+			<property name="path">ActivateWindow(Videos,"plugin://plugin.video.homelander/?action=tvNavigator",return)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
