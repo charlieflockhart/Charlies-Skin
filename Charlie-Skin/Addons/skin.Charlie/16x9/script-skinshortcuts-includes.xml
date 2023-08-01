@@ -182,6 +182,17 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">2</property>
+			<label>Watchlist Movies</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<visible>[False] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>noop</onclick>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">2</property>
 			<label>Search</label>
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -191,8 +202,8 @@
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">2</property>
 			<label>New Movies</label>
 			<label2>Custom item</label2>
@@ -203,20 +214,56 @@
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">2</property>
-			<label>Watchlist Movies</label>
+			<label>Watchlist</label>
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<onclick>ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/Movies",return)</onclick>
-			<property name="path">ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/Movies",return)</property>
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movies&amp;url=traktwatchlist",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movies&amp;url=traktwatchlist",return)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">2</property>
+			<label>Watched</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movies&amp;url=trakthistory",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movies&amp;url=trakthistory",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">2</property>
+			<label>Suggestions</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movies&amp;url=traktfeatured",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movies&amp;url=traktfeatured",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">2</property>
+			<label>Lists</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movieUserlists",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=movieUserlists",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">2</property>
 			<label>Homelander Movies</label>
 			<label2>Video Add-On</label2>
@@ -242,6 +289,17 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">3</property>
+			<label>Watchlist TV Series</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<visible>[False] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
+			<onclick>noop</onclick>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">3</property>
 			<label>Search</label>
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -251,8 +309,8 @@
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">3</property>
 			<label>New TV Shows</label>
 			<label2>Custom item</label2>
@@ -263,20 +321,56 @@
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">3</property>
-			<label>Watchlist TV Series</label>
+			<label>Watchlist</label>
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<onclick>ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/TVShows",return)</onclick>
-			<property name="path">ActivateWindow(10025,"special://userdata/addon_data/plugin.video.thecrew/TVShows",return)</property>
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=tvshows&amp;url=traktwatchlist",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=tvshows&amp;url=traktwatchlist",return)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">3</property>
+			<label>Watched</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=calendar&amp;url=trakthistory",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=calendar&amp;url=trakthistory",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
+			<label>Suggestions</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=tvshows&amp;url=traktfeatured",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=tvshows&amp;url=traktfeatured",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">3</property>
+			<label>Lists</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=tvUserlists",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.thecrew/?action=tvUserlists",return)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),series)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">3</property>
 			<label>Homelander TV Series</label>
 			<label2>Video Add-On</label2>
